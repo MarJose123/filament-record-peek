@@ -20,13 +20,16 @@ class PeekAction extends Action
     {
         parent::setUp();
 
-        $this->label('Peek Record');
+//        $this->label('Peek Record');
+        $this->tooltip = "Peek record";
 
         $this->color('secondary');
 
         $this->icon('heroicon-s-arrows-expand');
 
         $this->groupedIcon('heroicon-s-arrows-expand');
+
+        $this->form(fn($livewire) => invade($livewire)->getResourceForm(columns: 2, isDisabled: true)->getSchema());
 
         $this->modalHeading(fn(): string => __('filament-support::actions/view.single.modal.heading', ['label' => $this->getRecordTitle()]));
 
@@ -48,8 +51,6 @@ class PeekAction extends Action
 
             $form->fill($data);
         });
-
-        $this->form($this->getFormSchema());
 
         $this->action(static function (): void {
         });
