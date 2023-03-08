@@ -1,6 +1,6 @@
 <?php
 
-namespace MarJose123\FilamentRecordPeek\Action;
+namespace MarJose123\FilamentRecordPeek\Tables\Action;
 
 
 use Filament\Tables\Actions\Action;
