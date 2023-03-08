@@ -3,10 +3,10 @@
 namespace MarJose123\FilamentRecordPeek\Tables\Action;
 
 
-use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\ViewAction;
 
 
-class PeekAction extends Action
+class PeekAction extends ViewAction
 {
 
     public static function getDefaultName(): ?string
@@ -22,7 +22,11 @@ class PeekAction extends Action
 
         $this->color('secondary');
 
+        $this->icon('heroicon-s-arrows-expand');
+
         $this->groupedIcon('heroicon-s-arrows-expand');
+
+        $this->slideOver(true);
 
     }
 
