@@ -20,7 +20,7 @@ class PeekAction extends Action
     {
         parent::setUp();
 
-//        $this->label('Peek Record');
+        $this->label('Peek Record');
         $this->tooltip = "Peek record";
 
         $this->color('secondary');
