@@ -2,15 +2,10 @@
 
 namespace MarJose123\FilamentRecordPeek\Tables\Actions;
 
-
 use Closure;
 use Filament\Forms\ComponentContainer;
 use Filament\Tables\Actions\Action;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\ViewAction;
 use Illuminate\Database\Eloquent\Model;
-use Filament\Forms;
-
 
 class PeekAction extends Action
 {
@@ -32,7 +27,6 @@ class PeekAction extends Action
         $this->icon('heroicon-s-arrows-expand');
 
         $this->groupedIcon('heroicon-s-arrows-expand');
-
 
         $this->modalHeading(fn (): string => __('filament-support::actions/view.single.modal.heading', ['label' => $this->getRecordTitle()]));
 
@@ -57,18 +51,16 @@ class PeekAction extends Action
 
         $this->form($this->getFormSchema());
 
-
         $this->action(static function (): void {
         });
 
         $this->slideOver(true);
-
     }
+
     public function mutateRecordDataUsing(?Closure $callback): static
     {
         $this->mutateRecordDataUsing = $callback;
 
         return $this;
     }
-
 }
