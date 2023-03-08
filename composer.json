@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MarJose123\\FilamentRecordPeek\\": "src",
-            "MarJose123\\FilamentRecordPeek\\Database\\Factories\\": "database/factories"
+            "MarJose123\\FilamentRecordPeek\\": "src"
         }
     },
     "autoload-dev": {
@@ -63,10 +62,7 @@
         "laravel": {
             "providers": [
                 "MarJose123\\FilamentRecordPeek\\FilamentRecordPeekServiceProvider"
-            ],
-            "aliases": {
-                "FilamentRecordPeek": "MarJose123\\FilamentRecordPeek\\Facades\\FilamentRecordPeek"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
