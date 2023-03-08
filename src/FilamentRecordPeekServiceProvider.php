@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace MarJose123\FilamentRecordPeek;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class SkeletonServiceProvider extends PluginServiceProvider
+class FilamentRecordPeekServiceProvider extends PluginServiceProvider
 {
-    public static string $name = 'skeleton';
+    public static string $name = 'filament-record-peek';
 
     protected array $resources = [
         // CustomResource::class,
@@ -22,15 +22,15 @@ class SkeletonServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-skeleton' => __DIR__.'/../resources/dist/skeleton.css',
+        'plugin-filament-record-peek' => __DIR__.'/../resources/dist/filament-record-peek.css',
     ];
 
     protected array $scripts = [
-        'plugin-skeleton' => __DIR__.'/../resources/dist/skeleton.js',
+        'plugin-filament-record-peek' => __DIR__.'/../resources/dist/filament-record-peek.js',
     ];
 
     // protected array $beforeCoreScripts = [
-    //     'plugin-skeleton' => __DIR__ . '/../resources/dist/skeleton.js',
+    //     'plugin-filament-record-peek' => __DIR__ . '/../resources/dist/filament-record-peek.js',
     // ];
 
     public function configurePackage(Package $package): void
