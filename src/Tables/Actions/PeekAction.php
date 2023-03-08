@@ -20,7 +20,7 @@ class PeekAction extends Action
     {
         parent::setUp();
 
-        $this->label('Peek');
+        $this->label('Peek Record');
 
         $this->color('secondary');
 
@@ -28,9 +28,9 @@ class PeekAction extends Action
 
         $this->groupedIcon('heroicon-s-arrows-expand');
 
-        $this->modalHeading(fn (): string => __('filament-support::actions/view.single.modal.heading', ['label' => $this->getRecordTitle()]));
+        $this->modalHeading(fn(): string => __('filament-support::actions/view.single.modal.heading', ['label' => $this->getRecordTitle()]));
 
-        $this->modalActions(fn (): array => array_merge(
+        $this->modalActions(fn(): array => array_merge(
             $this->getExtraModalActions(),
             [
                 $this->getModalCancelAction()->label(__('filament-support::actions/view.single.modal.actions.close.label')),
